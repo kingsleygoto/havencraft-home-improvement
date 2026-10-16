@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #173D35;
+  --color-brand-green-dark: #0F2722;
+  --color-brand-green-light: #235449;
+  --color-brand-sand: #F3D8A0;
+  --color-brand-sand-dark: #D4B46E;
+  --color-brand-sand-light: #FAF4E8;
+  --color-brand-ivory: #F7F6F1;
+  --color-brand-charcoal: #242824;
+  --color-brand-gray-border: #DDE2DF;
+  --color-brand-gray-text: #58645E;
+
+  --font-serif: var(--font-playfair), "Newsreader", "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #242824;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Bespoke subtle hairline dividers */
+.hairline-border {
+  border-color: #DDE2DF;
+}
+
+/* Architectural grid rule lines */
+.architectural-grid {
+  background-image: linear-gradient(to right, rgba(23, 61, 53, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(23, 61, 53, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* High contrast accessible focus */
+:focus-visible {
+  outline: 2px solid #173D35;
+  outline-offset: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
